@@ -14,10 +14,12 @@ public class SimpleTest {
     }
 
     @Test
-    public void testWorker(){
-        Assert.assertEquals(25, worker.getAge());
+    public void testName(){
         Assert.assertEquals("Pink Floyd", worker.getName());
     }
 
-
+    @Test
+    public void testAge(){
+        Assert.assertNotEquals(2445, worker.getAge());
+    }
 }

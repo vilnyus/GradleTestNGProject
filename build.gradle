@@ -17,6 +17,17 @@ dependencies {
 
 
 test {
-    useTestNG()
+    useTestNG() {
+        useDefaultListeners = true
+    }
+
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+
+    reports.html.setDestination(file("$buildDir/html"))
 }
+
+mainClassName = 'src.test.java.SimpleTest'
+
 
